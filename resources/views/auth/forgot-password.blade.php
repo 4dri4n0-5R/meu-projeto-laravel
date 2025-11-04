@@ -16,18 +16,12 @@
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
-        <!-- --- MUDANÇA AQUI: ALINHAMENTO E TEXTO --- -->
-        
-        <!-- 1. Trocamos 'justify-center' ou 'justify-end' por 'justify-start' -->
         <div class="flex items-center justify-start mt-4"> 
             
-            <!-- 2. Trocamos o texto longo por "ENVIAR" -->
-            <!-- 3. Removemos as classes 'w-full' e 'justify-center' do botão (se existirem) -->
             <x-primary-button>
                 {{ __('ENVIAR') }}
             </x-primary-button>
         </div>
         
-        <!-- --- FIM DA MUDANÇA --- -->
     </form>
 </x-guest-layout>

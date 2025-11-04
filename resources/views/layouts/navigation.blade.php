@@ -1,5 +1,5 @@
 <?php
-// Usamos o Auth facade para verificar se o usuário está logado
+
 use Illuminate\Support\Facades\Auth;
 ?>
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
@@ -12,15 +12,11 @@ use Illuminate\Support\Facades\Auth;
                     <div>
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </div>
-                    <!--<a href="{{ route('tasks.index') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
-                    </a>-->
+                    
                 </div>
-
-                <!-- Navigation Links -->
+                
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                     
-                    <!-- Link "Painel de Controle" Desabilitado -->
                     <div class="inline-flex items-center px-1 pt-1 border-b-2 border-transparent text-sm font-medium leading-5 text-gray-500">
                         {{ __('Painel de controle') }}
                     </div>
@@ -44,14 +40,11 @@ use Illuminate\Support\Facades\Auth;
                     </x-slot>
 
                     <x-slot name="content">
-                        <!-- --- MUDANÇA 1 (DESKTOP) --- -->
-                        <!-- O link "Perfil" agora é "Voltar" e aponta para "tasks.index" -->
+                        
                         <x-dropdown-link :href="route('tasks.index')">
                             {{ __('Voltar') }}
                         </x-dropdown-link>
-                        <!-- --- FIM DA MUDANÇA 1 --- -->
-
-                        <!-- Authentication -->
+                        
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
@@ -94,14 +87,11 @@ use Illuminate\Support\Facades\Auth;
             </div>
 
             <div class="mt-3 space-y-1">
-                <!-- --- MUDANÇA 2 (MOBILE) --- -->
-                <!-- O link "Perfil" agora é "Voltar" e aponta para "tasks.index" -->
+                
                 <x-responsive-nav-link :href="route('tasks.index')">
                     {{ __('Voltar') }}
                 </x-responsive-nav-link>
-                <!-- --- FIM DA MUDANÇA 2 --- -->
-
-                <!-- Authentication -->
+                
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 

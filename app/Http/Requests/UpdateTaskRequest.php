@@ -22,7 +22,7 @@ class UpdateTaskRequest extends FormRequest
     public function rules(): array
     {
         return [
-            // As regras são idênticas à criação neste projeto simples:
+            
             'title' => 'required|string|max:150',
             'description' => 'nullable|string',
         ];

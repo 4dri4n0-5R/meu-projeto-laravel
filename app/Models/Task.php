@@ -13,12 +13,10 @@
             'title',
             'description',
             'is_completed',
-            'user_id', // <<< CAMPO ADICIONADO
+            'user_id',
         ];
 
-        /**
-         * Define o relacionamento: Uma tarefa pertence a um usuário.
-         */
+        
         public function user()
         {
             return $this->belongsTo(User::class);

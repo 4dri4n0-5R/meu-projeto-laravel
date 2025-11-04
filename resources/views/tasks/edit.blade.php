@@ -15,11 +15,7 @@
         <!-- Grupo Título (com espaçamento) -->
         <div class="form-group">
             <label for="title">Título:</label>
-            <!-- 
-                Usa old('title', $task->title). 
-                Isso preenche com o valor antigo (se a validação falhar) 
-                ou com o valor atual da tarefa ($task->title).
-            -->
+         
             <input type="text" id="title" name="title" value="{{ old('title', $task->title) }}">
             
             <!-- Exibição de Erro do Laravel -->

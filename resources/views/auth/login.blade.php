@@ -24,18 +24,10 @@
             <x-input-error :messages="$errors->get('password')" class="mt-2" />
         </div>
 
-        
-        <!-- --- MUDANÇA AQUI: CHECKBOX CORRIGIDO --- -->
-        
-        <!-- Bloco Flexível: Manter Conectado (Esquerda) e Esqueceu Senha (Direita) -->
         <div class="flex items-center justify-between mt-4">
             
             <label for="remember_me" class="inline-flex items-center">
-                <!-- 
-                    MUDANÇAS NAS CLASSES DO CHECKBOX:
-                    1. Trocamos 'text-indigo-600' por 'text-gray-800' (Cor do botão)
-                    2. Removemos 'focus:ring-indigo-500' (Para desabilitar o anel de foco)
-                -->
+               
                 <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-gray-800 shadow-sm focus:ring-transparent" name="remember">
                 <span class="ms-2 text-sm text-gray-600">{{ __('Manter conectado') }}</span>
             </label>
@@ -47,18 +39,12 @@
             @endif
         </div>
         
-        <!-- --- FIM DA MUDANÇA --- -->
-
-
-        <!-- Bloco do Botão "ENTRAR" (Mantido Centralizado) -->
         <div class="flex flex-col items-center mt-6"> 
             <x-primary-button class="w-full justify-center">
                 {{ __('ENTRAR') }}
             </x-primary-button>
         </div>
         
-        
-        <!-- Link de Cadastro (Mantido) -->
         <div class="text-center mt-6 pt-4 border-t border-gray-200">
             <p class="text-sm text-gray-600">
                 Não tem uma conta?
